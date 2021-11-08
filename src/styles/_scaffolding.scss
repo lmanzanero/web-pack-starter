@@ -1,0 +1,41 @@
+html {
+  font-size: $font-size;
+  font-family: $font-family;
+  background: $background-color;
+  color: $font-color;
+  line-height: 1.4;
+}
+
+body {
+  margin: auto;
+  text-align: center;
+  max-width: $page-width;
+}
+
+h1 {
+  margin: 2em 0 2rem;
+}
+
+.image {
+  display: inline-block;
+  height: 100px;
+  width: 100px; 
+  background-size: cover;
+}
+
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  border: 1px solid gold;
+  background: cadetblue;
+  margin: auto;
+  border-radius: 0.3em;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
