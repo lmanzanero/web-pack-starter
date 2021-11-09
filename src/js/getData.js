@@ -1,12 +1,7 @@
 
-export function getData() {
-  return fetch("https://jsonplaceholder.typicode.com/posts")
-  .then((data) => data.json())
-  .then((result) => {
-    const template = `
-        ${result.title}
-    `; 
-    return template
-  }); 
+export async function getData() {
+  const data = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const result = await data.json();  
+  return result;
 }
  
