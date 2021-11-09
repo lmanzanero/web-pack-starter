@@ -12,18 +12,18 @@ heading.textContent = Title();
 const button = document.createElement('button');
 button.innerText = "Get Cards";
 
-const cards = document.createElement('div');
-cards.innerHTML = Card();
+const cards = document.createElement('div'); 
+cards.classList.add("cards");
 
 
-button.addEventListener('click', async () => {
-  console.log("hello");
-  const data = await getData();
-  console.log(data);
-  return data
+button.addEventListener('click', async () => { 
+  const data = await getData(); 
+  data.forEach(card => { 
+    cards.insertAdjacentHTML('beforeend', Card(card.title));
+  });
 }); 
  
  
 
 const app = document.querySelector('#root')
-app.append(heading, cards, button)
+app.append(heading, button, cards)
