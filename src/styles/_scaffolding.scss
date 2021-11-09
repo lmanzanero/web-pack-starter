@@ -12,10 +12,6 @@ body {
   max-width: $page-width;
 }
 
-h1 {
-  margin: 2em 0 2rem;
-}
-
 .image {
   display: inline-block;
   height: 100px;
@@ -25,22 +21,12 @@ h1 {
 
 
 .cards {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
   padding: 1em;
 }
-
-.card {
-  width: 200px;
-  height: 200px;
-  border: 1px solid gold;
-  background: cadetblue;
-  margin: 1em auto;
-  border-radius: 0.3em;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
+ 
 
 button {
   border: none;

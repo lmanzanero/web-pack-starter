@@ -4,10 +4,11 @@ import '@/styles/index.scss'
 import { Card } from './js/components/Card';
 import { getData } from './js/getData'
 import 'regenerator-runtime/runtime';
-
+import { Header } from './js/components/Header';
+ 
 // Appending to the DOM
 const heading = document.createElement('h1')
-heading.textContent = Title();
+heading.innerHTML = Header();
 
 const button = document.createElement('button');
 button.innerText = "Get Cards";
@@ -17,11 +18,11 @@ cards.classList.add("cards");
 
 
 button.addEventListener('click', async () => { 
-  button.innerText = "Get Cards...";
+  button.innerText = "Get Cards..."; 
   const data = await getData(); 
   data.forEach(card => { 
     cards.insertAdjacentHTML('beforeend', Card(card.title));
-  });
+  }); 
   button.innerText = "Get Cards";
 }); 
  
