@@ -17,10 +17,12 @@ cards.classList.add("cards");
 
 
 button.addEventListener('click', async () => { 
+  button.innerText = "Get Cards...";
   const data = await getData(); 
   data.forEach(card => { 
     cards.insertAdjacentHTML('beforeend', Card(card.title));
   });
+  button.innerText = "Get Cards";
 }); 
  
  
